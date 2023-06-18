@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar Empleado</title>
+    <head th:replace="fragmentos/header :: head"></head>
+</head>
+<body>
+    <div th:insert="/fragmentos/header :: menu"> </div>
+
+
+    <div class="container mt-4">
+        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Agregar</a>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Rol</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:if="${noResult}">
+                    <td colspan="4">No se encontraron empleados con ese nombre.</td>
+                </tr>
+                <tr th:each="empleado : ${empleados}">
+                    <td th:text="${empleado.id}"></td>
+                    <td th:text="${empleado.nombre}"></td>
+                    <td th:text="${empleado.rol}"></td>
+                    <td>
+                        <a href="#" class="btn btn-success">Editar</a>
+                        <a href="#" class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultados 2</title>
+</head>
+<body>
+    <h1>Resultados 2 - Tabla de Multiplicar</h1>
+    <table>
+        <tr th:each="resultado : ${resultados}">
+            <td th:text="${resultado}"></td>
+            <td>
+                <input type="checkbox" th:checked="${resultado % 2 == 0}" th:disabled="${resultado % 2 != 0}">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

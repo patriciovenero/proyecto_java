@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="#">
+            <div class="form-row">
+                <label for="numeroDocumento">Número de Documento:</label>
+                <div class="form-group">
+                    <input type="text" id="numeroDocumento" name="numeroDocumento" th:value="${form.numeroDocumento}" required>
+                    <p th:if="${#fields.hasErrors('numeroDocumento')}" th:errors="*{numeroDocumento}"
+                        class="text-danger">Error de validación</p>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="nombres">Nombres:</label>
+                <div class="form-group">
+                    <input type="text" id="nombres" name="nombres" th:value="${form.nombres}" required>
+                    <p th:if="${#fields.hasErrors('nombres')}" th:errors="*{nombres}" class="text-danger">Error de
+                        validación</p>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="apellidos">Apellidos:</label>
+                <div class="form-group">
+                    <input type="text" id="apellidos" name="apellidos" th:value="${form.apellidos}" required>
+                    <p th:if="${#fields.hasErrors('apellidos')}" th:errors="*{apellidos}" class="text-danger">Error de
+                        validación</p>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="direccion">Dirección:</label>
+                <div class="form-group">
+                    <input type="text" id="direccion" name="direccion" th:value="${form.direccion}" required>
+                    <p th:if="${#fields.hasErrors('direccion')}" th:errors="*{direccion}" class="text-danger">Error de
+                        validación</p>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="telefono">Teléfono:</label>
+                <div class="form-group">
+                    <input type="tel" id="telefono" name="telefono" th:value="${form.telefono}" required>
+                    <p th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}" class="text-danger">Error de
+                        validación</p>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="correoElectronico">Correo Electrónico:</label>
+                <div class="form-group">
+                    <input type="email" id="correoElectronico" name="correoElectronico"
+                           th:value="${form.correoElectronico}" required>
+                    <p th:if="${#fields.hasErrors('correoElectronico')}" th:errors="*{correoElectronico}"
+                        class="text-danger">Error de validación</p>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="tarjetaCredito">Tarjeta de Crédito:</label>
+                <div class="form-group">
+                    <input type="text" id="tarjetaCredito" name="tarjetaCredito" th:value="${form.tarjetaCredito}" required>
+                    <p th:if="${#fields.hasErrors('tarjetaCredito')}" th:errors="*{tarjetaCredito}"
+                        class="text-danger">Error de validación</p>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+        </form>
+    </div>
+</body>
+</html>

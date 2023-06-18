@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Solicitud de Nueva Tarjeta</title>
+</head>
+<body>
+    <h2>Solicitud de Nueva Tarjeta</h2>
+
+    <form action="/formulario" method="post">
+        <label for="tipoDocumento">Tipo de documento:</label><br>
+        <input type="radio" id="dni" name="tipoDocumento" value="DNI"> DNI<br>
+        <input type="radio" id="carneExtranjeria" name="tipoDocumento" value="Carne de Extranjería"> Carne de Extranjería<br><br>
+
+        <label for="numeroDocumento">Número de documento:</label><br>
+        <input type="text" id="numeroDocumento" name="numeroDocumento"><br><br>
+
+        <label for="apellidoPaterno">Apellido Paterno:</label><br>
+        <input type="text" id="apellidoPaterno" name="apellidoPaterno"><br><br>
+
+        <label for="apellidoMaterno">Apellido Materno:</label><br>
+        <input type="text" id="apellidoMaterno" name="apellidoMaterno"><br><br>
+
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label><br>
+        <input type="text" id="fechaNacimiento" name="fechaNacimiento"><br><br>
+
+        <label for="sexo">Sexo:</label><br>
+        <input type="radio" id="masculino" name="sexo" value="Masculino"> Masculino<br>
+        <input type="radio" id="femenino" name="sexo" value="Femenino"> Femenino<br><br>
+
+        <label for="estadoCivil">Estado Civil:</label><br>
+        <select id="estadoCivil" name="estadoCivil">
+            <option value="Casado">Casado</option>
+            <option value="Soltero">Soltero</option>
+            <option value="Divorciado">Divorciado</option>
+            <option value="Viudo">Viudo</option>
+        </select><br><br>
+
+        <label for="situacionLaboral">Situación Laboral:</label><br>
+        <input type="text" id="situacionLaboral" name="situacionLaboral"><br><br>
+
+        <label for="rucEmpleador">RUC del Empleador:</label><br>
+        <input type="text" id="rucEmpleador" name="rucEmpleador"><br><br>
+
+        <input type="checkbox" id="terminosCondiciones" name="terminosCondiciones" value="acepto">
+        <label for="terminosCondiciones">Acepto los términos y condiciones</label><br><br>
+
+        <input type="submit" value="Solicitar Nueva Tarjeta">
+    </form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultados</title>
+</head>
+<body>
+    <h1>Resultados - Números Primos</h1>
+    <ul>
+        <li th:each="primo : ${primos}" th:text="${primo}"></li>
+    </ul>
+</body>
+</html>

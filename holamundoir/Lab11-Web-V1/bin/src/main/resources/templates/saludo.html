@@ -1,0 +1,39 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html ; charset=UTF-8"/>
+    <title>Hola Mundo</title>
+</head>
+<body>
+    <p th:text="'Mensaje recibido -> ' + ${mensaje} + '!'"/>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Hola Mundo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+    <p class="message" th:text="'Mensaje recibido -> ' + ${mensaje} + '!'"></p>
+</body>
+</html>
+

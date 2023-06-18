@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="https://www.thymeleaf.org">
+<head>
+    <title>Hola Mundo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Operacion</th>
+                    <th scope="col">Numero 1</th>
+                    <th scope="col">Numero 2</th>
+                    <th scope="col">Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td th:text="${ope}"></td>
+                    <td th:text="${num1}"></td>
+                    <td th:text="${num2}"></td>
+                    <td th:text="${rpta}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Operaciones</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Operaciones</h1>
+        <form action="/operaciones" method="GET">
+            <div class="form-group">
+                <label for="num1">Número 1:</label>
+                <input type="number" class="form-control" id="num1" name="num1" placeholder="Número 1" required>
+            </div>
+            <div class="form-group">
+                <label for="num2">Número 2:</label>
+                <input type="number" class="form-control" id="num2" name="num2" placeholder="Número 2" required>
+            </div>
+            <div class="form-group">
+                <label for="ope">Operación:</label>
+                <select class="form-control" id="ope" name="ope" required>
+                    <option value="suma">Suma</option>
+                    <option value="resta">Resta</option>
+                    <option value="multiplicacion">Multiplicación</option>
+                    <option value="division">División</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Calcular</button>
+        </form>
+        <h3 class="mt-4">Resultado:</h3>
+        <p>Número 1: <span th:text="${num1}"></span></p>
+        <p>Número 2: <span th:text="${num2}"></span></p>
+        <p>Operación: <span th:text="${ope}"></span></p>
+        <p>Resultado: <span th:text="${rpta}"></span></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html> -->
+
